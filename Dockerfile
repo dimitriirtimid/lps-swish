@@ -40,6 +40,8 @@ RUN make src
 # setup LPS environment
 WORKDIR $HOME
 RUN git clone https://bitbucket.org/lpsmasters/lps_corner $LPS_DIR
+WORKDIR $HOME/$LPS_DIR/swish/web/lps
+RUN bower install vis paper
 
 # expose the network port of the swish web server
 EXPOSE 3050
